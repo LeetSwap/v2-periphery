@@ -39,21 +39,15 @@ const config: HardhatUserConfig = {
     hardhat: {
       gasPrice: utils.parseUnits("60", "gwei").toNumber(),
     },
-    mainnet: {
-      url: `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_PROJECT_ID}`,
-      accounts: [DEPLOYER_PRIVATE_KEY],
-      gasPrice: utils.parseUnits("150", "gwei").toNumber(),
-    },
-    rinkeby: {
-      url: `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_PROJECT_ID}`,
-      accounts: [DEPLOYER_PRIVATE_KEY],
-      gasPrice: utils.parseUnits("1.002", "gwei").toNumber(),
-    },
-    evmostestnet: {
-      url: `https://eth.bd.evmos.dev:8545`,
-      accounts: [DEPLOYER_PRIVATE_KEY],
-      gasPrice: utils.parseUnits("50", "gwei").toNumber(),
-      chainId: 9000
+      base: {
+        url: "https://mainnet.base.org",
+        accounts: [DEPLOYER_PRIVATE_KEY],
+        // gasPrice: utils.parseUnits("150", "gwei").toNumber(),
+      },
+      canto: {
+        url: "https://canto.slingshot.finance",
+        accounts: [DEPLOYER_PRIVATE_KEY],
+        // gasPrice: utils.parseUnits("150", "gwei").toNumber(),
     },
   },
   abiExporter: {
