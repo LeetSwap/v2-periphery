@@ -54,6 +54,11 @@ const config: HardhatUserConfig = {
       accounts: [DEPLOYER_PRIVATE_KEY],
       // gasPrice: utils.parseUnits("18", "gwei").toNumber(),
     },
+      shibarium: {
+      url: "https://www.shibrpc.com",
+      accounts: [DEPLOYER_PRIVATE_KEY],
+      // gasPrice: utils.parseUnits("18", "gwei").toNumber(),
+    },
   },
   abiExporter: {
     path: "./dist/abi",
